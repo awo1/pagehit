@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style type="text/css">
+        #top-image {
+            background:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/0/8/8905/red-rocks-park-o.jpg') -25px -50px;
+            position:fixed ;
+            top:0;
+            width:100%;
+            z-index:0;
+            height:100%;
+            background-size: calc(100% + 50px);
+        }
+    </style>
+</head>
+<body>
+<div id="top-image"></div>
+<script>
+    $(document).ready(function() {
+        var movementStrength = 25;
+        var height = movementStrength / $(window).height();
+        var width = movementStrength / $(window).width();
+        $("#top-image").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var pageY = e.pageY - ($(window).height() / 2);
+            var newvalueX = width * pageX * -1 - 25;
+            var newvalueY = height * pageY * -1 - 50;
+            $('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
+        });
+    });
+</script>
+<script>
+    var _params = _params || [];
+    _params.push({
+        _url: '/games',
+        _referer: 'refer1',
+        _popup: 'popup1',
+        _utm_tags: 'utm1',
+        _ref_code: 'refcode1'
+    });
+    (function() {
+        var _mwla = document.createElement('script'); _mwla.type = 'text/javascript'; _mwla.async = true; _mwla.src = 'mwla.js';
+//        mwla.src = document.location.protocol + 'join2game.com/mwla.js';
+        document.documentElement.firstChild.appendChild(_mwla);
+    })();
+</script>
+
+</body>
+</html>
